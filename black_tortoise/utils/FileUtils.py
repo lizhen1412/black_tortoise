@@ -113,6 +113,25 @@ class FileUtils(object):
         except Exception as e:
             raise IOError(f"Error: Failed to append to file {file_path}. {str(e)}")
 
+    # 新增删除文件方法，如果存在就删除
+    @staticmethod
+    def delete_file(file_path: str) -> Optional[bool]:
+        """
+        删除文件。
+
+        :param file_path: 文件路径
+        :return: True 表示成功删除，False 表示文件不存在
+        :raises OSError: 如果删除文件时发生错误，抛出此异常
+        """
+        try:
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+                return True
+            else:
+                return False
+        except Exception as e:
+            raise OSError(f"Error: Failed to delete file {file_path}. {str(e)}") from e
+
 
 if __name__ == '__main__':
     pass
