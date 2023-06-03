@@ -45,7 +45,7 @@ class Logger:
         if project_path is None:
             # 当前项目文件的，绝对真实路径
             # 路径，一个点代表当前目录，两个点代表当前目录的上级目录
-            project_path = os.path.realpath('..')
+            project_path = os.path.realpath('../..')
         # 返回当前项目路径
         return project_path
 

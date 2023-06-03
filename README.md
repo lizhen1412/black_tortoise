@@ -7,10 +7,14 @@
 1. 源码查看项目结构 tree 方法
 ```shell
 tree -I "venv|__pycache__|*.pyc|*.pyo|*.so|*.egg-info|*.egg|*.log|*.txt|*.md|*.json|*.yaml|*.yml|*.ini|*.cfg|*.conf|*.xml|*.html|*.rst|*.rst.txt|*.rst"
+
+# 移除常规文件夹
+tree -I 'venv|bin|black_tortoise.egg-info|build|dist'
 ```
 2. 项目结构说明
 ```shell
- dosc
+black_tortoise
+|dosc
 │   └── deployment -- 发布相关文档介绍 
 ├── mock_data  -- mock 数据
 │   ├── __init__.py

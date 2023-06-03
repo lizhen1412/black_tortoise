@@ -12,7 +12,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='black_tortoise',  # 应用名
-    version='0.2',  # 版本号
+    version='0.1.1',  # 版本号
     packages=find_packages(),  # 包括在安装包内的Python包
     include_package_data=True,  # 启用清单文件MANIFEST.in
     install_requires=[
@@ -41,4 +41,5 @@ setup(
 )
 
 if __name__ == '__main__':
+    print(find_packages())
     pass
